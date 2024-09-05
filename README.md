@@ -48,12 +48,18 @@ bash script_name.sh
 6. View the Results:
 Once complete, navigate to the output directory to view the results. 
 
-## 
-required arguments:
-  {scatter,convert}  Mode of operation: scatter for scatter plot, convert for gene expression conversion
-  file1              Path to the first file, need to have column gene_id and FPKM for convert and TPM for scatter
-  file2              Path to the second file (not required for convert mode), need to have column TPM for scatter
-  out_dir            Directory to save the output plot or converted files
+## file summary
+`1. run_vina_from_txt_v5.sh: 
+automates the docking of multiple ligands with multiple receptors using AutoDock Vina, organizing the results and logs into separate directories, and saving docking affinities to CSV files for each ligand.
+
+2. remain_create_file.sh:
+This bash script handles unexpected interruptions during the execution of 'run_vina_from_txt_v5.sh' by identifying ligands and receptors that have not been processed yet and organizing them into a newly created folder for easy continuation of the docking process.
+
+3. remain_conversion_pdbqt.sh:
+
+2. run_vina_from_txt_v4.sh: 
+runs the automated docking process for the remaining files by specifying the output directory. 
+
 options:
   -h, --help            show this help message and exit
   --x_label X_LABEL     Label for x-axis
