@@ -1,34 +1,49 @@
-# or_pattern
+# README Guide for AutoDock Vina Batch Docking Script
 
-# quantgene
-`quantgene` takes in file with relative gene expression units as a input and outputs file including converted TPM value or scatter plot of TPM values based on the user's choice.
-## Download 
-To download this tool, clone this repository:
-```
-git clone https://github.com/kmjsm2/quantgene
-```
-Then change the current folder to quantgene by:
-```
-cd quantgene
-```
-## Installiation  
-`quantgene` requires the `pandas`, `numpy`, and `matplotlib.pyplot` libraries to be installed. 
-
-To install those libraries: 
-```
-pip install pandas numpy matplotlib
-```
-
-After required libraries installed, install `quantgene` by below command: 
-```
-pip install .
+# Overview 
+`This script automates the docking process for multiple receptor and ligand files using AutoDock Vina. It loops through all ligand files in a specified directory and docks them against all receptor files in another specified directory. The results, including affinity values, are saved in CSV files, with each ligand-receptor pair's docking output and log files stored in organized directories.
+## Prerequisite  
+`
+- AutoDock Vina: Ensure that AutoDock Vina is installed and accessible via the path specified in the script (vina_path). The script assumes you are using AutoDock Vina version 1.1.2.
+- Bash: This script is designed to be run in a Unix-like environment with Bash.
+- Openbabel
+- ChimeraX
+- Pymol
+- python tool
+  
+## Directory Structure   
+`
+- Receptor Directory (RECEPTOR_DIR): Contains PDBQT files for all receptors.
+- Ligand Directory (LIGAND_DIR): Contains PDBQT files for all ligands.
+- Output Base Directory (BASE_OUTPUT_DIR): Contains three subdirectories:
+-- pdbqt: Stores docking output files (.pdbqt).
+-- log: Stores log files (.txt).
+-- csv: Stores CSV files with docking results.
 ```
 ## Basic usage
-To run `quantgene` 
+
+1. Navigate to the Script Directory:
 ```
-quantgene [-h] [--x_label X_LABEL] [--y_label Y_LABEL] [--p_title P_TITLE] [--o_title O_TITLE] [--converted CONVERTED] [—input_dir INPUT_DIR]{scatter,convert} file1 [file2] out_dir
+cd /path/to/your/script_directory
 ```
+2. Make the Script Executable (Optional): 
 ```
+chmod +x script_name.sh
+```
+3. Run the Script:
+```
+./script_name.sh
+```
+An alternative way to run the script: 
+```
+bash script_name.sh
+```
+4. Monitor the Process:
+ The script will start the docking process for each ligand-receptor pair. You will see output in the terminal indicating the progress of each docking job.
+5. View the Results:
+Once complete, navigate to the output directory to view the results. 
+
+## 
 required arguments:
   {scatter,convert}  Mode of operation: scatter for scatter plot, convert for gene expression conversion
   file1              Path to the first file, need to have column gene_id and FPKM for convert and TPM for scatter
