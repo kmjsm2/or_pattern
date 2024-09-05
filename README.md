@@ -19,28 +19,32 @@
 -- pdbqt: Stores docking output files (.pdbqt).
 -- log: Stores log files (.txt).
 -- csv: Stores CSV files with docking results.
-```
+
 ## Basic usage
 
 1. Navigate to the Script Directory:
 ```
 cd /path/to/your/script_directory
 ```
+
 2. Make the Script Executable (Optional): 
 ```
 chmod +x script_name.sh
 ```
+
 3. Run the Script:
 ```
 ./script_name.sh
 ```
-An alternative way to run the script: 
+  a. An alternative way to run the script: 
 ```
 bash script_name.sh
 ```
+
 4. Monitor the Process:
  The script will start the docking process for each ligand-receptor pair. You will see output in the terminal indicating the progress of each docking job.
-5. View the Results:
+
+6. View the Results:
 Once complete, navigate to the output directory to view the results. 
 
 ## 
