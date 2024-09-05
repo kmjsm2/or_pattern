@@ -16,9 +16,9 @@
 - Receptor Directory (RECEPTOR_DIR): Contains PDBQT files for all receptors.
 - Ligand Directory (LIGAND_DIR): Contains PDBQT files for all ligands.
 - Output Base Directory (BASE_OUTPUT_DIR): Contains three subdirectories:
--- pdbqt: Stores docking output files (.pdbqt).
--- log: Stores log files (.txt).
--- csv: Stores CSV files with docking results.
+  -- pdbqt: Stores docking output files (.pdbqt).
+  -- log: Stores log files (.txt).
+  -- csv: Stores CSV files with docking results.
 
 ## Basic usage
 
