@@ -2,7 +2,7 @@
 
 # Overview 
 This script automates the docking process for multiple receptor and ligand files using AutoDock Vina. It loops through all ligand files in a specified directory and docks them against all receptor files in another specified directory. The results, including affinity values, are saved in CSV files, with each ligand-receptor pair's docking output and log files stored in organized directories.
-## Prerequisite  
+# Prerequisite  
 
 - AutoDock Vina: Ensure that AutoDock Vina is installed and accessible via the path specified in the script (vina_path). The script assumes you are using AutoDock Vina version 1.1.2.
 - Bash: This script is designed to be run in a Unix-like environment with Bash.
@@ -11,7 +11,7 @@ This script automates the docking process for multiple receptor and ligand files
 - Pymol
 - python tool
   
-## Directory Structure   
+# Directory Structure   
 
 - Receptor Directory (RECEPTOR_DIR): Contains PDBQT files for all receptors.
 - Ligand Directory (LIGAND_DIR): Contains PDBQT files for all ligands.
@@ -21,7 +21,7 @@ This script automates the docking process for multiple receptor and ligand files
     `-- log: Stores log files (.txt).
     `-- csv: Stores CSV files with docking results.
 
-## Basic usage
+# Basic usage
 
 1. Navigate to the Script Directory:
 ```
@@ -48,23 +48,23 @@ bash script_name.sh
 6. View the Results:
 Once complete, navigate to the output directory to view the results. 
 
-## file summary
+# file summary
 
-# Cleaning PDB files Step
+## Cleaning PDB files Step
 1. clean_pdb.py:
 This Python script uses PyMOL to process PDB files by removing water molecules and adding missing hydrogens. It fetches the input and output directories from environment variables, iterates through all PDB files in the input directory, applies the cleaning steps, and saves the cleaned files to the output directory. Each structure is cleared from memory after processing.
 
 2. clena_pdb.sh:
 This bash script sets up input and output directories, checks if the input directory exists, lists its contents, and then runs a PyMOL script to clean PDB files by setting environment variables for the directories.
 
-# Trimming and Converting into PDBQT files Step 
+## Trimming and Converting into PDBQT files Step 
 1. multi_conversion.sh:
 This script automates the conversion of PDB files into PDBQT format by trimming unnecessary parts (solvents, ions, ligands) and converting the clean structure using OpenBabel, logging all processes for error tracking. (uses openbabel for file conversion and Chimera X for trimming)
 
 2. chi_convert_pdb_to_pdbqt.sh:
 This script is structured similarly to the one you previously shared, but it's designed to process a single PDB file. 
   
-# Molecular Docking via Autodock Vina
+## Molecular Docking via Autodock Vina
 1. run_vina_from_txt_v5.sh: 
 This automates the docking of multiple ligands with multiple receptors using AutoDock Vina, organizing the results and logs into separate directories, and saving docking affinities to CSV files for each ligand.
 
