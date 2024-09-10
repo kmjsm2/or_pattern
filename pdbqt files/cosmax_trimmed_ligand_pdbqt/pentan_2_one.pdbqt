@@ -1,0 +1,19 @@
+REMARK  Name = /Users/zoekim/Desktop/l3/vina_OR/new_trimmed_ligand_pdb/pentan_2_one_trimmed.pdb
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ATOM      1  O   UNL     1       1.403   3.512   0.000  0.00  0.00    -0.102 OA
+ATOM      2  C   UNL     1       3.135   4.512   0.000  0.00  0.00    +3.386 C 
+ATOM      3  C   UNL     1       2.269   5.012   0.000  0.00  0.00    +1.979 C 
+ATOM      4  C   UNL     1       4.001   5.012   0.000  0.00  0.00    +1.644 C 
+ATOM      5  C   UNL     1       1.403   4.512   0.000  0.00  0.00    -1.214 C 
+ATOM      6  C   UNL     1       0.537   5.012   0.000  0.00  0.00    +0.344 C 
+TER 
+REMARK  Name = /Users/zoekim/Desktop/l3/vina_OR/new_trimmed_ligand_pdb/pentan_2_one_trimmed.pdb
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ATOM      1  O   UNL     2       0.970   1.037   0.000  0.00  0.00    -1.486 OA
+ATOM      2  C   UNL     2       2.702   1.037   0.000  0.00  0.00    +3.302 C 
+ATOM      3  C   UNL     2       1.836   0.537   0.000  0.00  0.00    +1.882 C 
+ATOM      4  C   UNL     2       3.568   0.537   0.000  0.00  0.00    +1.621 C 
+ATOM      5  H   UNL     2       0.233   0.407   0.000  0.00  0.00    +0.000 HD
+TER 
