@@ -1,5 +1,8 @@
 # README Guide for AutoDock Vina Batch Docking Script
 
+# Author
+MyungJoo(Zoe) Kim
+
 # Overview 
 This script automates the docking process for multiple receptor and ligand files using AutoDock Vina. It loops through all ligand files in a specified directory and docks them against all receptor files in another specified directory. The results, including affinity values, are saved in CSV files, with each ligand-receptor pair's docking output and log files stored in organized directories.
 # Prerequisite  
